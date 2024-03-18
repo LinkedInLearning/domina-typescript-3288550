@@ -7,7 +7,7 @@ const implementaHechizo = (objeto: unknown): objeto is Hechizo => {
   return (
     typeof objeto === 'object' &&
     objeto !== null &&
-   // Object.keys(objeto).length === 2 &&
+    // Object.keys(objeto).length === 2 &&
     'nombreHechizo' in objeto &&
     'lanzarHechizo' in objeto &&
     typeof objeto.nombreHechizo === 'string' &&
@@ -21,10 +21,10 @@ const verificadorHechizo = {
 };
 
 const verificadorHechizo2 = {
-    nombreHechizo: 'Lumos',
-    noPertenece: 'noPertenece',
-    lanzarHechizo: () => console.log('Que haya luz'),
-  };
+  nombreHechizo: 'Lumos',
+  noPertenece: 'noPertenece',
+  lanzarHechizo: () => console.log('Que haya luz'),
+};
 
 // Implementar la comprobación de tipo en tiempo de ejecución
 if (implementaHechizo(verificadorHechizo)) {
@@ -34,7 +34,7 @@ if (implementaHechizo(verificadorHechizo)) {
 }
 
 if (implementaHechizo(verificadorHechizo2)) {
-    console.log('verificadorHechizo2 implementa Hechizo');
-  } else {
-    console.log('verificadorHechizo2 no implementa Hechizo');
-  }
+  console.log('verificadorHechizo2 implementa Hechizo');
+} else {
+  console.log('verificadorHechizo2 no implementa Hechizo');
+}
