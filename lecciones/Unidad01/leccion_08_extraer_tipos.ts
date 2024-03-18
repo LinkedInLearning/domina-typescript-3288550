@@ -1,7 +1,7 @@
 interface LibroMagico {
   titulo: string;
   autor: string;
-  propiedadesMagicas: any;
+  propiedadesMagicas: unknown;
 }
 
 interface CurriculoHogwarts {
@@ -42,3 +42,4 @@ function listarMaterialesParaClase(nombreClase: ClaseHogwarts) {
 }
 
 listarMaterialesParaClase('pociones');
+listarMaterialesParaClase('prueba');

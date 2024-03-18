@@ -15,5 +15,9 @@ type Rango<De extends number, A extends number> = Exclude<
   Enumerar<De>
 >;
 
+// Enumerar<3> genera una unión de tipo de 0 | 1 | 2
+// Enumerar<5> genera una unión de tipo de 0 | 1 | 2 | 3 | 4
+// Exclude<0 | 1 | 2 | 3 | 4, 0 | 1 | 2>
+// T = 3 | 4
 type EjemploRango1 = Rango<3, 5>;
 type EjemploRango2 = Rango<3, 100>;

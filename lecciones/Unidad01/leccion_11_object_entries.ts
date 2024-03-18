@@ -7,11 +7,18 @@ type InventarioMago = {
   nombrePoción: string;
 };
 
-// Ejemplo 1:
+const ejemploInventarioMago: InventarioMago = {
+  varita: 10,
+  nombrePoción: 'dulce',
+};
 
+const ejemplo1 = Object.entries(ejemploInventarioMago);
+//[['varita', 10], ['nombrePoción', 'dulce']]
+
+// Ejemplo 1:
 type Ejemplo1 = ParesClaveValor<InventarioMago>;
 // El tipo es (["varita", number] | ["nombrePoción", string])[]
-const ejemplo1: Ejemplo1 = [
+const ejemplo2: Ejemplo1 = [
   ['varita', 10],
   ['nombrePoción', 'dulce'],
 ];
@@ -27,7 +34,7 @@ type ManejadoresEventos = {
 type EntradasManejadores = ParesClaveValor<ManejadoresEventos>;
 // El tipo es ["onClick", () => void] | ["onMouseEnter", () => void]
 // | ["onKeyPress", (tecla: string) => boolean])[]
-const ejemplo2Eventos: EntradasManejadores = [
+const ejemploEventos: EntradasManejadores = [
   ['onClick', () => {}],
   ['onKeyPress', (tecla: string) => typeof tecla === 'string'],
   ['onMouseEnter', () => {}],
@@ -43,7 +50,7 @@ type ObjetoTiposMixtos = {
 type EntradasTiposMixtos = ParesClaveValor<ObjetoTiposMixtos>;
 // El tipo es [("id", number) | ("esValido", boolean) | ("nombre", string)
 // | ("calcularPuntuacion", (valores: number[]) => number)][]
-const ejemplo2TiposMixtos: EntradasTiposMixtos = [
+const ejemploTiposMixtos: EntradasTiposMixtos = [
   ['id', 4],
   ['esValido', true],
   ['nombre', 'Ana'],

@@ -12,7 +12,8 @@ const esUnCaracterDeBreakingBad = (personaje: string): boolean => {
 console.log(esUnCaracterDeBreakingBad('WalterWhite')); // true
 console.log(esUnCaracterDeBreakingBad('GusFring')); // false
 
-// Utilizando Object.values() para verificar si ambos, la llave o el valor string son parte del Enum
+// Utilizando Object.values() para verificar si ambos,
+// la llave o el valor string son parte del Enum
 
 enum ApodosBreakingBad {
   Heisenberg = 'Walter White',
@@ -21,7 +22,7 @@ enum ApodosBreakingBad {
 }
 
 const esApodoDeBreakingBad = (apodo: string): boolean => {
-  const apodos: string[] = Object.values(ApodosBreakingBad) as string[];
+  const apodos: string[] = Object.values(ApodosBreakingBad);
   return apodos.includes(apodo);
 };
 
