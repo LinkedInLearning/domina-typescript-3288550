@@ -26,24 +26,16 @@ const miMoto: Moto = {marca: 'Honda', cilindrada: 250};
 imprimirDetalles(miCoche); // Output: Es un coche de marca Toyota y modelo Corolla.
 imprimirDetalles(miMoto); // Output: Es una moto de marca Honda y cilindrada 250cc.
 
-type Empleado = {
-  nombre: string;
-  salario: number;
-};
-
-type Estudiante = {
-  nombre: string;
-  grado: string;
-};
-
-function obtenerInformacionPersona(persona: Empleado | Estudiante): string {
-  return 'salario' in persona
-    ? `El salario de ${persona.nombre} es ${persona.salario} dólares.`
-    : `El grado de ${persona.nombre} es ${persona.grado}.`;
+function procesarDato(dato: number | string): string {
+  if (typeof dato === 'number') {
+    return `El número es ${dato}.`;
+  } else if (typeof dato === 'string') {
+    return `El texto es: "${dato}".`;
+  } else {
+    return 'Tipo de dato no reconocido.';
+  }
 }
 
-const empleado: Empleado = {nombre: 'Juan', salario: 50000};
-const estudiante: Estudiante = {nombre: 'María', grado: 'Ingeniería'};
-
-console.log(obtenerInformacionPersona(empleado)); // Output: El salario de Juan es 50000 dólares.
-console.log(obtenerInformacionPersona(estudiante)); // Output: El grado de María es Ingeniería.
+console.log(procesarDato(42)); // Output: El número es 42.
+console.log(procesarDato('Hola mundo')); // Output: El texto es: "Hola mundo".
+//console.log(procesarDato(true)); // Output: Tipo de dato no reconocido.
