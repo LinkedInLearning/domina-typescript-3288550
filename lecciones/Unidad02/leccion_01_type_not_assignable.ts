@@ -9,11 +9,11 @@
 // 1. Tipos Incompatibles
 // Intento de asignar un valor de un tipo a una variable de otro tipo.
 
-// let edadJonSnow: number = "veinticinco";
+const edadJonSnow_1: number = 'veinticinco';
 // Error: El tipo 'string' no es asignable al tipo 'number'.
 // Interpretación y Corrección: La edad de Jon Snow debería ser un número, no una cadena de texto.
 
-const edadJonSnow = 25; // Corregido
+const edadJonSnow_2 = 25; // Corregido
 
 // 2. Incompatibilidad en la Estructura del Objeto
 // El objeto no coincide con la forma esperada.
@@ -25,7 +25,7 @@ interface Personaje {
 
 const tyrion1: Personaje = {
   nombre: 'Tyrion Lannister',
-  título: 'Mano de la Reina',
+  titulo: 'Mano de la Reina',
 };
 
 // Error: El objeto solo puede tener propiedades conocidas,
@@ -145,7 +145,7 @@ function obtenerDetallePersonajeBien<T extends Personaje2>(detalle: T): string {
 obtenerDetallePersonajeBien({nombre: 'Arya', arma: 'Aguja'});
 
 // Sobrecarga de la Función:
-interface Personaje {
+interface Personaje3 {
   nombre: string;
   casa: string;
   arma: string;
@@ -153,13 +153,13 @@ interface Personaje {
 
 // Firma de sobrecarga para personajes sin casa
 function obtenerDetallePersonajeSobrecarga(
-  detalle: Omit<Personaje, 'casa'>
+  detalle: Omit<Personaje3, 'casa'>
 ): string;
 // Firma de función original
-function obtenerDetallePersonajeSobrecarga(detalle: Personaje): string;
+function obtenerDetallePersonajeSobrecarga(detalle: Personaje3): string;
 // Implementación de la función
-function obtenerDetallePersonajeSobrecarga(detalle: any): string {
-  return detalle.nombre;
+function obtenerDetallePersonajeSobrecarga(detalle: unknown): string {
+  return detalle.nombre; // agregar código para manejar valor unknown
 }
 
 obtenerDetallePersonajeSobrecarga({nombre: 'Arya', arma: 'Aguja'});

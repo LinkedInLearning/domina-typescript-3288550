@@ -46,11 +46,24 @@ interface MantieneTronoHierro {
   (casa: Casa): boolean;
 }
 
+const esCasa = (valor: unknown): valor is Casa => {
+  return (
+    typeof valor === 'object' &&
+    valor !== null &&
+    'nombre' in valor &&
+    typeof valor.nombre === 'string' &&
+    Object.keys(valor).length === 1
+  );
+};
+
 // Implementación de función única que maneja todos los casos, asignada a una variable
-const mantieneTronoHierro_4: MantieneTronoHierro = (casa: any): boolean => {
-  const duenoTrono = 'Targaryen';
-  const houseName = typeof casa === 'string' ? casa : casa.nombre;
-  return houseName === duenoTrono;
+const mantieneTronoHierro_4: MantieneTronoHierro = (casa: unknown): boolean => {
+  if (esCasa(casa) || typeof casa === 'string') {
+    const duenoTrono = 'Targaryen';
+    const houseName = typeof casa === 'string' ? casa : casa.nombre;
+    return houseName === duenoTrono;
+  }
+  return false;
 };
 
 console.log(mantieneTronoHierro_4('Stark'));
