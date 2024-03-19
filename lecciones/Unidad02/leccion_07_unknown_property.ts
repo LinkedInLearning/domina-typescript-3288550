@@ -28,7 +28,8 @@ const nuevaAlianza_1: DetailedAlianza = {
 };
 
 //   2. Propiedades opcionales
-// A veces, no se conocen o no son necesarios todos los detalles. Podemos marcar algunas propiedades como opcionales:
+// A veces, no se conocen o no son necesarios todos los detalles.
+// Podemos marcar algunas propiedades como opcionales:
 interface Alianza2 {
   casas: string[];
   pacto: string;
@@ -42,7 +43,7 @@ const nuevaAlianza_2: Alianza2 = {
   ubicacion: 'Riverrun',
 };
 
-// 4. Asunción de tipo
+// 4. Aserción de tipo
 
 // Use esta herramienta con precaución, le está diciendo a TypeScript que confíe en nuestra intención.
 const nuevaAlianza_3 = {

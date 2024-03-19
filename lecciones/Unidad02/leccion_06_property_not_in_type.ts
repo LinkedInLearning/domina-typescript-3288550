@@ -24,7 +24,7 @@ const jonSnow_2: HeroeConTitulo = {
   titulo: 'Rey en el Norte',
 };
 
-console.log(jonSnow.titulo);
+console.log(jonSnow_2.titulo);
 
 // 2. Extendiendo interfaces
 interface HeroeNoble extends Heroe {
@@ -37,34 +37,34 @@ const jonSnow_3: HeroeNoble = {
   titulo: 'Rey en el Norte',
 };
 
-console.log(jonSnow.titulo);
+console.log(jonSnow_3.titulo);
 
 //   3. Propiedades opcionales
-interface Heroe {
+interface HeroeTituloOpcional {
   nombre: string;
   casa: string;
   titulo?: string; // Una propiedad opcional
 }
 
-const jonSnow_4: Heroe = {
+const jonSnow_4: HeroeTituloOpcional = {
   nombre: 'Jon Snow',
   casa: 'Stark',
   titulo: 'Rey en el Norte',
 };
 
-console.log(jonSnow.titulo);
+console.log(jonSnow_4.titulo);
 
 // 4. Signaturas de índice
-interface Heroe {
+interface HeroeIndice {
   nombre: string;
   casa: string;
   [key: string]: string; // permitiendo propiedades dinámicas
 }
 
-const jonSnow_5: Heroe = {
+const jonSnow_5: HeroeIndice = {
   nombre: 'Jon Snow',
   casa: 'Stark',
   titulo: 'Rey en el Norte',
 };
 
-console.log(jonSnow.titulo);
+console.log(jonSnow_5.titulo);

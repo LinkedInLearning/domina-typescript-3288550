@@ -21,7 +21,7 @@ enviarCuervo_2('¡Todos aclamen al Rey en el Norte!');
 // 2. Se esperaban X argumentos, pero se obtuvieron Y
 type Consejero = (nombre: string, titulo: string) => string;
 
-const consejeroTyrion_1: Consejero = (nombre: string) =>
+const consejeroTyrion_1: Consejero = (nombre: string, titulo: undefined) =>
   `${nombre} es la Mano de la Reina`; // Error: El tipo no proporciona una coincidencia para la firma.
 
 //1. Cumplir con el tipo de argumentos
@@ -33,7 +33,7 @@ type Consejero_2 = (nombre: string, titulo?: string) => string;
 
 // 3. No se puede invocar una expresión cuyo tipo carece de una firma de llamada
 const libroHechizos = {
-  descifrar: 'Hechizo de sescifrado de textos antiguos',
+  descifrar: 'Hechizo de descifrado de textos antiguos',
 };
 
 libroHechizos.descifrar(); // Error: No se puede invocar una expresión cuyo tipo carece de una firma de llamada.
@@ -53,18 +53,18 @@ const descifrarHechizo = (texto: string) => {
 descifrarHechizo(libroHechizos.descifrar);
 
 // 4. Una función cuyo tipo declarado no es 'void' ni 'any' debe devolver un valor
-const enviarAdvertencia = (señal: string): string => {
+const enviarAdvertenciaMal = (senal: string): string => {
   // No hay declaración de retorno aquí
 };
 
-enviarAdvertencia('¡Caminantes Blancos!'); // Error: La función carece de declaración de retorno.
+enviarAdvertenciaMal('¡Caminantes Blancos!'); // Error: La función carece de declaración de retorno.
 
 //1. Asegurarse de que la función cumpla con su deber devolviendo la señal de advertencia apropiada.
-const enviarAdvertencia_2 = (señal: string): string => {
-  return `Advertencia: ${señal}`;
+const enviarAdvertenciaBien = (senal: string): string => {
+  return `Advertencia: ${senal}`;
 };
 
 //2. Si no es necesario devolver una advertencia específica, cambiar el tipo de retorno de la función a void.
-const enviarAdvertencia_3 = (señal: string): void => {
-  console.log(`Advertencia: ${señal}`);
+const enviarAdvertenciaVoid = (senal: string): void => {
+  console.log(`Advertencia: ${senal}`);
 };
