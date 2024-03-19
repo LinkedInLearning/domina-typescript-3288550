@@ -1,11 +1,21 @@
 // Cómo corregir el error "El argumento de tipo '..' no es asignable al parámetro de tipo…"
 
-// Simplemente estructurando el valor:
-
 interface Casa {
   nombre: string;
   simbolo: string;
 }
+
+const declareAllegiance = (casa: Casa) => {
+  console.log(`${casa.nombre} promete lealtad al reino.`);
+};
+
+declareAllegiance({
+  nombre: 'Stark',
+  simbolo: 'Direwolf',
+  lema: 'El invierno se acerca',
+});
+
+// Simplemente estructurando el valor:
 
 const declaraAlianza = (casa: Casa) => {
   console.log(`${casa.nombre} promete lealtad al reino.`);
