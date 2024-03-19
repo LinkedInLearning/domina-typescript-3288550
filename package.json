@@ -2,7 +2,6 @@
   "name": "domina-typescript",
   "description": "Este es el repositorio del curso de LinkedIn Learning `Domina TypeScript`. El curso completo está disponible en [LinkedIn Learning][lil-course-url].",
   "version": "1.0.0",
-  "main": "src/init.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "gts lint",
@@ -19,8 +18,11 @@
   "author": "Natalia Corea",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "20.8.2",
     "gts": "^5.2.0",
-    "typescript": "^5.4.2",
-    "@types/node": "20.8.2"
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "yup": "^1.4.0"
   }
 }
