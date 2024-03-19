@@ -4,13 +4,14 @@
 // capturar y reportar errores en toda la aplicación.
 // Extendiendo el objeto window para el registro global de errores
 interface Window {
-  logError: (error: Error, context?: string) => void;
+  logError: (error: Error, contexto?: string) => void;
 }
 
 // Implementación de la función global de registro de errores
 window.logError = (error, contexto = 'General') => {
   console.log(`Error en ${contexto}:`, error);
-  // Aquí, típicamente enviarías la información del error a un servicio de monitoreo
+  // Aquí, típicamente enviarías la información del error a 
+  // un servicio de monitoreo
 };
 
 // Manejador global de errores
@@ -27,5 +28,7 @@ try {
   // Algún proceso propenso a errores
   throw new Error('Algo salió mal');
 } catch (error) {
-  window.logError(error, 'Función de ejemplo');
+  window.logError(error as Error, 'Función de ejemplo');
 }
+
+throw new Error('Algo salió mal otra vez');
