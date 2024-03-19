@@ -3,6 +3,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "outDir": "build",
+    "resolveJsonModule": true,
     "lib": [
       "es2016",
       "dom"
@@ -11,6 +12,5 @@
   "include": [
     "src/**/*.ts",
     "test/**/*.ts"
-  ],
-  "resolveJsonModule": true, 
+  ], 
 }
