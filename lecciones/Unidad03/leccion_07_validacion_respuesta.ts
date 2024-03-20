@@ -23,14 +23,12 @@ function esPerfilUsuario(data: unknown): data is PerfilUsuario {
 async function obtenerPerfilUsuario(
   idUsuario: number
 ): Promise<PerfilUsuario | null> {
-  // const respuesta = await fetch(`https://api.ejemplo.com/usuarios/${idUsuario}`);
-  // const datos = await respuesta.json();
+  const respuesta = await fetch(`./json/usuario.json`);
+  const datos = await respuesta.json();
 
-  const datos = {
-    id: 10,
-    nombre: 'Usuario Ejemplo',
-    correo: 'usuario@example.com',
-  };
+  // Mala práctica es asertar valores sin validarlos:
+  // return datos as PerfilUsuario;
+
 
   if (esPerfilUsuario(datos)) {
     return datos;
