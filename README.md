@@ -8,17 +8,25 @@ Consulta el archivo Readme en la rama main para obtener instrucciones e informac
 DESCRIPCIÓN DEL CURSO
 
 ## Instrucciones
-Este repositorio tiene ramas (branches) para cada uno de los vídeos del curso. Puedes usar el menú emergente de la rama en GitHub para cambiar a una rama específica y echar un vistazo al curso en esa etapa, o puedes añadir `/tree/nombre_de_la_rama` a la URL para ir a la rama a la que quieres acceder.
 
-## Ramas
-Las ramas están estructuradas para corresponder a los vídeos del curso. La convención de nomenclatura es Capítulo#_Vídeo#. Por ejemplo, la rama denominada `02_03` corresponde al segundo capítulo y al tercer vídeo de ese capítulo. Algunas ramas tendrán un estado inicial y otro final. Están marcadas con las letras i («inicio») y f («fin»). La branch i tiene el mismo código que al principio del vídeo. La branch f tiene el mismo código que al final del vídeo. La rama master tiene el estado final del código que aparece en el curso.
+Este repositorio no tiene ramas por lo que al descargar el repositorio completo obtendrás los archivos en su versión final.
+
+Dentro de la carpeta ´lecciones´ encontrarás uan carpeta corresponde a una unidad del curso y cada una tiene un nombre con un formato de `Unidad#unidad`. Cada carpeta contiene archivos TypeScript, cada uno correspondiente con los ejemplos de cada lección. Algunos ejemplos estan dentro de subcarpetas, esto con el objetivo de agrupar los ejemplos que incluyen código HTML y CSS. Los archivos y carpetas de las lecciones tienen un nombre con un formato de `Leccion_#leccion_tema_de_la_leccion`. Por ejemplo, el archivo de la lección 3 de la unidad 2 se encuentran en el directorio: `Unidad02/leccion_03_variables_no_definidas.ts`.
+
+Los archivos dentro de la carpeta ´lecciones´ no son tomados en cuenta por el compilador de TypeScript del proyecto, esto porque muchos archivos cuentan con líneas de código con errores a modo de ejemplo. Para que puedas compilar el código tienes disponible el archivo `src/index.ts` donde `pdrás agregar el código de la lección para ver los resultados en el navegador. Las lecciones que incluyen código HTML tendrás que agregar el código HTML al archivo ´build/src/index.html´. 
 
 ## Instalación
+
 1. Para utilizar estos archivos de ejercicios, debes tener descargado lo siguiente:
-	- [software]
-	
+   - Un editor de código ([VS Code](https://code.visualstudio.com/) es recomendado)
+   - Un navegador web
+   - Opcionalmente puedes instalar [Node.js](https://nodejs.org/en/) también para correr los archivos JavaScript
+
 2. Clona este repositorio en tu máquina local usando la Terminal (macOS) o CMD (Windows), o una herramienta GUI como SourceTree.
-3. [Instrucciones específicas del curso].
+3. Corre el comando ´npm install´ para instalar las dependencias.
+4. Corre el comando ´npm start´ para inicializar el servidor local y el compilador TypeScript.
+
+El proyecto no cuenta con live or hot reloading por lo que tendrás que refescar la página para ver los cambios en el navegador.
 
 ### Docente
 
