@@ -23,8 +23,8 @@ Los archivos dentro de la carpeta `lecciones` no son tomados en cuenta por el co
    - Un navegador web
 
 2. Clona este repositorio en tu máquina local usando la Terminal (macOS) o CMD (Windows), o una herramienta GUI como SourceTree.
-3. Corre el comando ´npm install´ para instalar las dependencias.
-4. Corre el comando ´npm start´ para inicializar el servidor local y el compilador TypeScript.
+3. Corre el comando `npm install` para instalar las dependencias.
+4. Corre el comando `npm start` para inicializar el servidor local y el compilador TypeScript.
 
 El proyecto no cuenta con live or hot reloading por lo que tendrás que refescar la página para ver los cambios en el navegador.
 
