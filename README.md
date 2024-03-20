@@ -18,9 +18,9 @@ Los archivos dentro de la carpeta `lecciones` no son tomados en cuenta por el co
 ## Instalación
 
 1. Para utilizar estos archivos de ejercicios, debes tener descargado lo siguiente:
+   - [Node.js](https://nodejs.org/en/)
    - Un editor de código ([VS Code](https://code.visualstudio.com/) es recomendado)
    - Un navegador web
-   - Opcionalmente puedes instalar [Node.js](https://nodejs.org/en/) también para correr los archivos JavaScript
 
 2. Clona este repositorio en tu máquina local usando la Terminal (macOS) o CMD (Windows), o una herramienta GUI como SourceTree.
 3. Corre el comando ´npm install´ para instalar las dependencias.
