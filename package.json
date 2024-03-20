@@ -8,7 +8,7 @@
     "clean": "gts clean",
     "compile": "tsc",
     "fix": "gts fix",
-    "start": "npx tsc -w",
+    "start": "npx tsc -w & npx http-server -o ./build/src",
     "posttest": "npm run lint"
   },
   "repository": {
@@ -20,6 +20,7 @@
   "devDependencies": {
     "@types/node": "20.8.2",
     "gts": "^5.2.0",
+    "http-server": "^14.1.1",
     "typescript": "^5.4.2"
   },
   "dependencies": {
