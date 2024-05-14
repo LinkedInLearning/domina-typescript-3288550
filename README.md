@@ -35,7 +35,7 @@ El proyecto no cuenta con live or hot reloading por lo que tendrás que refescar
 Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.com/learning/instructors//natalia-corea).
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
-[lil-course-url]: https://www.linkedin.com/learning/building-a-graphql-project-with-react-js
+[lil-course-url]: https://www.linkedin.com/learning/domina-typescript/
 [lil-thumbnail-url]: https://media.licdn.com/dms/image/D4D0DAQHKzGued4Yg9A/learning-public-crop_675_1200/0/1715592455486?e=2147483647&v=beta&t=C9hf9XNdn0-GveAWRF27ejBNJ7n9_nwRO9atd0cGtXM
 
 
